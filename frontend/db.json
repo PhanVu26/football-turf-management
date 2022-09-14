@@ -1,0 +1,182 @@
+{
+    "slots" : [
+        {
+          "id": 0,
+          "start": "2022-07-26T15:30:00",
+          "end": "2022-07-26T16:30:00",
+          "allDay": false,
+          "title": "Vũ Phan - 0967139958 - Pendding",
+          "colorEvento": "yellow",
+          "status": "P"
+        }    
+    ],
+
+    "turfs": [
+        {
+            "id": 0,
+            "name": "Sân Nam Khánh",
+            "address": "23 Pham Van Dong, Ho Chi Minh, Viet Nam",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [106.66655480861664, 10.80042677948629]
+            },
+            "image": "https://www.sporteeno.com/wp-content/uploads/2021/07/mobs2.jpg",
+            "kindOfTurf": [
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                },
+                {
+                    "type": "San 7",
+                    "price": 19.00
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Sân Minh Trí",
+            "address": "18 Vo Van Ngan, Cao Bang, Viet Nam",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [106.59811019897461, 10.683887460987405]
+            },
+            "image": "https://www.sporteeno.com/wp-content/uploads/2021/07/mobs2.jpg",
+            "kindOfTurf": [
+                {
+                    "type": "San 5",
+                    "price": 5.000
+                },
+                {
+                    "type": "San 7",
+                    "price": 12.000
+                }
+            ]
+
+        },
+        {
+            "id": 2,
+            "name": "Sân Tản Viên",
+            "address": "15 Dinh Tien Hoang, Ho Chi Minh, Viet Nam",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [106.7627763748169, 10.889213411059686]
+            },
+            "image": "https://www.sporteeno.com/wp-content/uploads/2021/07/mobs2.jpg",
+            "kindOfTurf": [
+                {
+                    "type": "San 7",
+                    "price": 12.000
+                },
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                }
+            ]
+
+        },
+        {
+            "id": 3,
+            "name": "Sân Sài Gòn",
+            "address": "12/2 Au Co, Ho Chi Minh, Viet Nam",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [106.25856399536133, 22.665977043773207]
+            },
+            "image": "https://www.sporteeno.com/wp-content/uploads/2021/07/mobs2.jpg",
+            "kindOfTurf": [
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                },
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                }
+            ]
+
+        },
+        {
+            "id": 4,
+            "name": "Sân Hà Nội",
+            "address": "Ha Noi, Viet Nam",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [105.8412, 21.0245]
+            },
+            "image": "https://www.sporteeno.com/wp-content/uploads/2021/07/mobs2.jpg",
+            "kindOfTurf": [
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                },
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                }
+            ]
+
+        },
+        {
+            "id": 5,
+            "name": "Sân Vinh",
+            "address": "Vinh, Viet Nam",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [105.6922, 18.6733]
+            },
+            "image": "https://www.sporteeno.com/wp-content/uploads/2021/07/mobs2.jpg",
+            "kindOfTurf": [
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                },
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                }
+            ]
+
+        },
+        {
+            "id": 6,
+            "name": "Sân Red Rabbit",
+            "address": "Hue, Viet Nam",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [107.5908, 16.4637]
+            },
+            "image": "https://www.sporteeno.com/wp-content/uploads/2021/07/mobs2.jpg",
+            "kindOfTurf": [
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                },
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                }
+            ]
+
+        },
+        {
+            "id": 7,
+            "name": "Sân Golden Chicken",
+            "address": "Thanh Hoa, Viet Nam",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [105.7764, 19.8075]
+            },
+            "image": "https://www.sporteeno.com/wp-content/uploads/2021/07/mobs2.jpg",
+            "kindOfTurf": [
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                },
+                {
+                    "type": "San 5",
+                    "price": 12.000
+                }
+            ]
+        }
+    ]
+}
