@@ -18,6 +18,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <io.jsonwebtoken.version>0.9.1</io.jsonwebtoken.version>
+        <lombok.version>1.18.24</lombok.version>
+        <spring.aop.version>5.3.24</spring.aop.version>
     </properties>
     <dependencies>
         <dependency>
@@ -56,6 +58,18 @@
             <artifactId>jjwt</artifactId>
             <version>${io.jsonwebtoken.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.aop.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
