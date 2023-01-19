@@ -3,7 +3,7 @@ package kms.bootcamp.footballturfmanagementservice.dto;
 
 import java.io.Serializable;
 
-public class JwtRequest implements Serializable {
+public class JwtRequest extends HttpBase implements Serializable {
 
     private static final long serialVersionUID = -6647896292165060258L;
 

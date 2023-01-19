@@ -1,17 +1,43 @@
 package kms.bootcamp.footballturfmanagementservice.controller;
 
+import kms.bootcamp.footballturfmanagementservice.dto.TurfRequest;
+import kms.bootcamp.footballturfmanagementservice.dto.TurfResponse;
+import kms.bootcamp.footballturfmanagementservice.service.impl.TurfServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
+@RequestMapping("/turfs")
 public class TurfController {
 
-    @GetMapping(value = "/turfs")
-    public List<String> getTurfs() {
-        List<String> turfs = new ArrayList<>();
-        turfs.add("A");
-        return turfs;
+    @Autowired
+    TurfServiceImpl turfService;
+
+    @GetMapping()
+    public ResponseEntity<TurfResponse> getTurfs(@RequestBody TurfRequest request) {
+        return ResponseEntity.ok(turfService.retrieveTurfList(request));
     }
+
+    @PostMapping()
+    public ResponseEntity<TurfResponse> performCreate(@RequestBody TurfRequest request) {
+        return ResponseEntity.ok(turfService.performCreate(request));
+    }
+
+    @PutMapping()
+    public ResponseEntity<TurfResponse> performUpdate(@RequestBody TurfRequest request) {
+        return ResponseEntity.ok(turfService.performUpdate(request));
+    }
+
+    @DeleteMapping()
+    public ResponseEntity<TurfResponse> performDelete(@RequestBody TurfRequest request) {
+        return ResponseEntity.ok(turfService.performDelete(request));
+    }
+
 }

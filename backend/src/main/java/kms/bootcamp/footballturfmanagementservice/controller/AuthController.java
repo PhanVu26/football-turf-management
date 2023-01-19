@@ -2,8 +2,11 @@ package kms.bootcamp.footballturfmanagementservice.controller;
 
 import kms.bootcamp.footballturfmanagementservice.dto.JwtRequest;
 import kms.bootcamp.footballturfmanagementservice.dto.JwtResponse;
+import kms.bootcamp.footballturfmanagementservice.dto.UserRequest;
+import kms.bootcamp.footballturfmanagementservice.dto.UserResponse;
 import kms.bootcamp.footballturfmanagementservice.security.JwtUserDetailsService;
 import kms.bootcamp.footballturfmanagementservice.security.TokenManager;
+import kms.bootcamp.footballturfmanagementservice.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,6 +27,8 @@ public class AuthController {
     private AuthenticationManager authenticationManager;
     @Autowired
     private TokenManager tokenManager;
+    @Autowired
+    private UserServiceImpl userService;
 
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> createToken(@RequestBody JwtRequest request) throws DisabledException, BadCredentialsException {
@@ -40,5 +45,10 @@ public class AuthController {
         final UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
         final String jwtToken = tokenManager.generateJwtToken(userDetails);
         return ResponseEntity.ok(new JwtResponse(jwtToken));
+    }
+
+    @PostMapping("/signup")
+    public ResponseEntity<UserResponse> signup(@RequestBody UserRequest request) {
+        return ResponseEntity.ok(userService.createUser(request));
     }
 }
