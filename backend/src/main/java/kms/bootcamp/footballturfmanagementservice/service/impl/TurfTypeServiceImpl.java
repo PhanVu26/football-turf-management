@@ -50,6 +50,10 @@ public class TurfTypeServiceImpl extends BaseService implements TurfTypeService 
     public TurfTypeResponse retrieveTurfTypeList(TurfTypeRequest request) {
         TurfTypeResponse response = new TurfTypeResponse();
         List<TurfTypeEntity> turfTypeEntity = turfTypeRepository.findAll();
+        if (CollectionUtils.isEmpty(turfTypeEntity)) {
+            mapFailResponseValue(response, "Record is not found");
+            return response;
+        }
         List<TurfTypeDetail> turfTypeDetailList = mapEntitiesToDetails(turfTypeEntity);
         response.setTurfTypeDetailList(turfTypeDetailList);
         mapSuccessResponseValue(response);
@@ -120,6 +124,11 @@ public class TurfTypeServiceImpl extends BaseService implements TurfTypeService 
         turfTypeRepository.delete(entity.get());
         mapSuccessResponseValue(response);
         return response;
+    }
+
+    @Override
+    public TurfTypeEntity findByCode(String code) {
+        return turfTypeRepository.findByCode(code);
     }
 
     private List<TurfTypeDetail> mapEntitiesToDetails(List<TurfTypeEntity> entities) {

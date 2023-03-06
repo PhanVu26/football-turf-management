@@ -19,4 +19,6 @@ public interface TurfTypeService {
     TurfTypeResponse performUpdate(TurfTypeRequest request);
 
     TurfTypeResponse performDelete(TurfTypeRequest request);
+
+    TurfTypeEntity findByCode(String code);
 }
