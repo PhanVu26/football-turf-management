@@ -1,5 +1,4 @@
 FROM maven:3.8.2-jdk-11
-RUN mkdir -p /app
 WORKDIR /app
 COPY . .
 RUN mvn clean install

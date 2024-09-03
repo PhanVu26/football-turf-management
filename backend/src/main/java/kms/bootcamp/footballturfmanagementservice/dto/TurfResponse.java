@@ -1,5 +1,6 @@
 package kms.bootcamp.footballturfmanagementservice.dto;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import lombok.Data;
 
 import java.util.List;

@@ -7,7 +7,7 @@ const login = data  => {
 }
 
 const getMainTurfs = () => {
-  return http.get("/api/mainturfs/getmainturflist")
+  return http.get("/turfs")
 } 
 
 const getTurfsInMainTurf = id => {

@@ -2,6 +2,7 @@ package kms.bootcamp.footballturfmanagementservice.controller;
 
 import kms.bootcamp.footballturfmanagementservice.dto.TurfRequest;
 import kms.bootcamp.footballturfmanagementservice.dto.TurfResponse;
+import kms.bootcamp.footballturfmanagementservice.service.TurfService;
 import kms.bootcamp.footballturfmanagementservice.service.impl.TurfServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TurfController {
 
     @Autowired
-    TurfServiceImpl turfService;
+    TurfService turfService;
 
     @GetMapping()
     public ResponseEntity<TurfResponse> getTurfs(@RequestBody TurfRequest request) {
